@@ -1,0 +1,197 @@
+  *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+
+
+ #navbar{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    position: fixed;
+    /* top: 0px; */
+    z-index: 99;
+    /* left: ; */
+ }
+
+ #navbar img{     
+  width: 150px;
+ }
+
+ #navbar nav ul{
+  display: flex;
+  gap: 15px;
+  list-style:none;
+ }
+
+ #navbar nav ul li a{
+   text-decoration: none;
+   color: black;
+   text-transform: uppercase;
+   transition:all 2s ease ;
+ }
+
+ #navbar nav ul li a:hover{
+
+color:rgb(250, 126, 101) ;
+font-size: 30px;
+ 
+
+ }
+
+ #navbar .icon{
+
+  display: flex;
+  gap: 35px;
+
+ }
+
+ #navbar .call{
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgb(250, 126, 101);
+  background-color: rgb(250, 126, 101);
+  border-radius: 20px;
+  padding: 5px 30px;
+  color: white;
+  font-size: 13px;
+
+ }
+
+
+ /* First page css starts from here  */
+
+ #firstPage{
+
+     width: 100%;
+     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ #firstPage h1{
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1;
+ }
+
+ #firstPage img{
+  position: absolute;
+  width: 40%;
+  z-index: 2;
+  /* left: 350px;
+  top: 5px; */
+ }
+
+ #SecondPage{
+
+     width: 100%;
+     height: 100vh;
+    
+ }
+
+ #SecondPage #container{
+   
+  width: 100%;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(8,300px);
+  overflow-x: scroll;
+  scrollbar-width: none;
+  /* grid-template-columns: auto auto auto; */
+  /* grid-template-columns: 2fr 1fr 1fr; */
+  /* justify-content: center; */
+  gap: 20px;
+
+ }
+
+
+ #SecondPage #container div{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+ }
+
+ #Third{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #Third div{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(223, 160, 82);
+  /* box-shadow: Horizontal Verticle  Blur    Spread    Color  ; */
+  box-shadow:      -15px      10px   10px      0px     gray ;
+ }
+
+ #bars{
+  display: none;
+ }
+
+ #check{
+  display: none;
+ }
+
+
+ @media (min-width:431px) and (max-width:768px){
+
+
+
+ }
+
+ 
+ @media (max-width:430px){
+
+#bars{
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  z-index: 100;
+  font-size: 30px;
+}
+
+ #navbar{
+     /* background-color: brown; */
+ }
+
+ #firstPage h1{
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+  #navbar nav ul{
+    display: none;
+  }
+
+   #navbar .icon{
+    display: none;
+   }
+
+    #navbar .call{
+      display: none;
+    }
+
+  #check:checked~ #navbar nav ul {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 70px;
+    background-color: bisque;
+  }
+
+
+ }
